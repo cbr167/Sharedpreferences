@@ -62,14 +62,19 @@ private  SaveSetting saveSetting = null;
                         saveSetting.saveDetails();
                         break;
                     case R.id.getButton:
-                        nameText.setText(saveSetting.getName());
-                        emailText.setText(saveSetting.getEmail());
+
                         break;
                     case R.id.clearButton:
                         saveSetting.clear();
+                        editEmail.setText("");
+                        editName.setText("");
                         break;
                 }
+                //Setting name and email to textview
+                nameText.setText(saveSetting.getName());
+                emailText.setText(saveSetting.getEmail());
             }
+            
         };
 
     }
